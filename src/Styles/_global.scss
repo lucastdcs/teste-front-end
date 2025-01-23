@@ -4,6 +4,7 @@
   font-weight: 400;
 
   background-color: #ffffff;
+  color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -12,7 +13,7 @@
 }
 
 ::placeholder,
-input {
+input, button {
   font-family: "Poppins", Helvetica, Arial, sans-serif;
 }
 
