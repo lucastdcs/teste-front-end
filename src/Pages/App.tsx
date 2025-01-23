@@ -1,6 +1,7 @@
 import "./App.scss";
 import Header from "../Components/Header/Header";
 import Button from "../Components/Button/Button";
+import Products from "../Components/Products/Products";
 import TechIcon from "../assets/icons/categories/tech-icon.svg";
 import SupermarketIcon from "../assets/icons/categories/supermarket-icon.svg";
 import BeveragetIcon from "../assets/icons/categories/beverage-icon.svg";
@@ -49,7 +50,7 @@ function App() {
                 <div className="categorie-card">
                   <img src={BeveragetIcon} alt="Ícone de bebidas" />
                 </div>
-                  <span>Bebidas</span>
+                <span>Bebidas</span>
               </a>
             </li>
             <li>
@@ -86,6 +87,7 @@ function App() {
             </li>
           </ul>
         </section>
+        <Products />
       </main>
     </>
   );

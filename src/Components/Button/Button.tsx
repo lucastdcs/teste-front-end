@@ -1,11 +1,12 @@
 import "./Button.scss";
 
 type Buttonprops = {
-    text: string
+    text: string,
+    className: string
 }
-function Button ({text}: Buttonprops){
+function Button ({text, className}: Buttonprops){
 return(
-    <button>
+    <button className={`styled-button ${className || ""}`}>
         {text}
     </button>
 )

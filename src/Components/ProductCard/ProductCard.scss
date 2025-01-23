@@ -1,0 +1,53 @@
+@import "../../Styles/global";
+@import "../../Styles/variables";
+
+.product-card {
+  @include flex(column, space-evenly, inherit);
+  gap: 12px;
+
+  width: 304px;
+  height: 500px;
+  padding: 16px 13px;
+
+  box-shadow: 0px 3px 19px 0px #00000038;
+  border-radius: $border-radius;
+  color: #3f3f40;
+
+  .product-info {
+    @include flex(column, space-evenly, inherit);
+    text-align: left;
+
+
+    p {
+      margin: 0;
+    }
+
+    .description {
+      font-size: 15px;
+      font-weight: 300;
+    }
+
+    .old-price {
+      font-size: 16px;
+      font-weight: 400;
+      color: #808080;
+      text-decoration-line: line-through;
+    }
+
+    .new-price {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .payment-description {
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    .free-shipping {
+      font-size: 12px;
+      font-weight: 400;
+      color: $blue;
+    }
+  }
+}
