@@ -1,6 +1,13 @@
 import "./App.scss";
 import Header from "../Components/Header/Header";
 import Button from "../Components/Button/Button";
+import TechIcon from "../assets/icons/categories/tech-icon.svg";
+import SupermarketIcon from "../assets/icons/categories/supermarket-icon.svg";
+import BeveragetIcon from "../assets/icons/categories/beverage-icon.svg";
+import ToolsIcon from "../assets/icons/categories/tools-icon.svg";
+import HealthCareIcon from "../assets/icons/categories/health-care-icon.svg";
+import SportsIcon from "../assets/icons/categories/sports-icon.svg";
+import FashionIcon from "../assets/icons/categories/fashion-icon.svg";
 
 function App() {
   return (
@@ -14,9 +21,70 @@ function App() {
               <p>
                 <strong>50% Off</strong> nos produtos
               </p>
-              <Button text="Ver produto"/>
+              <Button text="Ver produto" />
             </div>
           </div>
+        </section>
+        <section id="categories" aria-labelledby="categorias-title">
+          <h2 id="categorias-title">Categorias</h2>
+          <ul className="categories-list">
+            <li>
+              <a href="#tecnologia">
+                <div className="categorie-card">
+                  <img src={TechIcon} alt="Ícone de tecnologia" />
+                </div>
+                <span>Tecnologia</span>
+              </a>
+            </li>
+            <li>
+              <a href="#supermercado">
+                <div className="categorie-card">
+                  <img src={SupermarketIcon} alt="Ícone de supermercado" />
+                </div>
+                <span>Supermercado</span>
+              </a>
+            </li>
+            <li>
+              <a href="#bebidas">
+                <div className="categorie-card">
+                  <img src={BeveragetIcon} alt="Ícone de bebidas" />
+                </div>
+                  <span>Bebidas</span>
+              </a>
+            </li>
+            <li>
+              <a href="#ferramentas">
+                <div className="categorie-card">
+                  <img src={ToolsIcon} alt="Ícone de ferramentas" />
+                </div>
+                <span>Ferramentas</span>
+              </a>
+            </li>
+            <li>
+              <a href="#saude">
+                <div className="categorie-card">
+                  <img src={HealthCareIcon} alt="Ícone de saúde" />
+                </div>
+                <span>Saúde</span>
+              </a>
+            </li>
+            <li>
+              <a href="#esporte">
+                <div className="categorie-card">
+                  <img src={SportsIcon} alt="Ícone de esportes" />
+                </div>
+                <span>Esportes e Fitness</span>
+              </a>
+            </li>
+            <li>
+              <a href="#moda">
+                <div className="categorie-card">
+                  <img src={FashionIcon} alt="Ícone de moda" />
+                </div>
+                <span>Moda</span>
+              </a>
+            </li>
+          </ul>
         </section>
       </main>
     </>

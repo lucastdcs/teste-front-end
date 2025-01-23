@@ -34,3 +34,45 @@
     }
   }
 }
+
+#categories {
+  .categories-list {
+    @include flex(row, space-evenly, center);
+    margin: auto;
+    list-style: none;
+    max-width: 1160px;
+
+    li {
+      a {
+        @include flex(column, inherit, center);
+
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 14px;
+
+        .categorie-card {
+          position: relative;
+          width: 128px;
+          height: 128px;
+          color: #f4f4f4;
+          box-shadow: 0px 4px 11px 0px #00000021;
+          border-radius: $border-radius;
+          margin-bottom: 22px;
+
+          img {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+          }
+        }
+
+        span {
+          text-align: center;
+          color: #4e4e4e;
+         
+        }
+      }
+    }
+  }
+}
