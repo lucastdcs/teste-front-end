@@ -1,0 +1,115 @@
+@import "../../Styles/global";
+@import "../../Styles/variables";
+
+@mixin flex($direction: row, $justify: flex-start, $align: stretch) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+header {
+  @include flex(column);
+  min-width: 1280px;
+}
+
+.benefits {
+  margin: auto;
+  min-width: 764px;
+
+  @include flex(row, space-between, center);
+
+  .item {
+    @include flex;
+    gap: 9px;
+
+    p {
+      font-size: 12px;
+      color: $gray;
+      font-weight: 500;
+
+      b {
+        color: $blue;
+      }
+    }
+  }
+}
+
+.header {
+  @include flex(row, space-evenly, center);
+  width: 100%;
+  margin: 0 80px;
+
+  .search-form {
+    min-width: 630px;
+
+    label {
+      display: none;
+    }
+
+    .input-container {
+      @include flex();
+      overflow: hidden;
+
+      input {
+        flex: 1;
+        width: 100%;
+        background-color: #f6f5f2;
+        border: none;
+        border-radius: $border-radius;
+        padding: 10px 24px;
+        font-size: 14px;
+
+        &:focus {
+          outline: none;
+        }
+
+        &::placeholder {
+          color: $gray;
+          font-weight: 500;
+        }
+      }
+
+      button {
+        border: none;
+        border-radius: $border-radius;
+        background-color: #f6f5f2;
+        margin: 0 0 0 -15px;
+        padding: 10px 24px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .nav-principal {
+    width: 216px;
+    ul {
+      @include flex(row, space-evenly);
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.nav-categories {
+  min-width: 1280px;
+
+  ul {
+    @include flex(row, space-evenly);
+    list-style: none;
+    padding: 0;
+    li {
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 600;
+      color: #9f9f9f;
+      cursor: pointer;
+    }
+
+    &:last-child{
+      @include flex(row, none, center);
+    }
+  }
+}
