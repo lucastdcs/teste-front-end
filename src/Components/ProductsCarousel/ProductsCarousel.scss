@@ -1,0 +1,13 @@
+@import "../../Styles/global";
+@import "../../Styles/variables";
+
+.arrow-prev{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.arrow-next{
+    position: absolute;
+    top: 0;
+    left: 0;
+}

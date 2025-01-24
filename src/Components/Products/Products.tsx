@@ -1,51 +1,9 @@
 import "./Products.scss";
-import ProductCard from "../ProductCard/ProductCard";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import ArrowPrev from "../../assets/icons/arrow-prev.svg";
-import ArrowNext from "../../assets/icons/arrow-next.svg";
+import ProductsCarousel from "../ProductsCarousel/ProductsCarousel";
 
-type Props = {
-    className?: string;
-    style?: React.CSSProperties;
-    onClick?: () => void; 
-  };
-  
-  function SampleNextArrow({ className, style, onClick }: Props) {
-    return (
-      <div
-        className={className}
-        style={{ ...style, cursor: "pointer" }}
-        onClick={onClick}
-      >
-        <img src={ArrowNext} alt="Próximo" className="arrow-next"/>
-      </div>
-    );
-  }
-
-  function SamplePrevArrow({ className, style, onClick }: Props) {
-    return (
-      <div
-        className={className}
-        style={{ ...style, cursor: "pointer"}}
-        onClick={onClick}
-      >
-        <img src={ArrowPrev} alt="Anterior" className="arrow-prev"/>
-      </div>
-    );
-  }
-
+type Props ={};
 function Products({}: Props) {
-  const settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />
-  };
+
   return (
     <section className="related-products">
       <div className="container">
@@ -72,13 +30,7 @@ function Products({}: Props) {
             </li>
           </ul>
         </nav>
-        <Slider {...settings}>
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-        </Slider>
+        <ProductsCarousel/>
       </div>
     </section>
   );
