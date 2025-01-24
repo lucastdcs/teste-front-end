@@ -1,6 +1,9 @@
 @import "../Styles/global";
 @import "../Styles/variables";
 
+main{
+  overflow: hidden;
+}
 .hero {
   height: 390px;
   position: relative;

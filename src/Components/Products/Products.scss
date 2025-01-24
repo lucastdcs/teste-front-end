@@ -5,6 +5,7 @@
   max-width: 1364px;
   text-align: center;
   margin: 90px auto;
+
   h2 {
     font-size: 30px;
     font-weight: 700;
@@ -31,4 +32,16 @@
       }
     }
   }
+}
+
+
+.arrow-prev{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.arrow-next{
+    position: absolute;
+    top: 0;
+    left: 0;
 }

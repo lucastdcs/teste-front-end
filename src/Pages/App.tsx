@@ -22,7 +22,7 @@ function App() {
               <p>
                 <strong>50% Off</strong> nos produtos
               </p>
-              <Button text="Ver produto" />
+              <Button text="Ver produto" className=""/>
             </div>
           </div>
         </section>
