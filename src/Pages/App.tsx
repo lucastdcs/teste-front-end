@@ -88,6 +88,7 @@ function App() {
           </ul>
         </section>
         <Products />
+        <Products seeAll={true}/>
       </main>
     </>
   );
