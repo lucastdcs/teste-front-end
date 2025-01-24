@@ -9,6 +9,7 @@ import ToolsIcon from "../assets/icons/categories/tools-icon.svg";
 import HealthCareIcon from "../assets/icons/categories/health-care-icon.svg";
 import SportsIcon from "../assets/icons/categories/sports-icon.svg";
 import FashionIcon from "../assets/icons/categories/fashion-icon.svg";
+import Logo from "../assets/icons/Logo.svg"
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
               <p>
                 <strong>50% Off</strong> nos produtos
               </p>
-              <Button text="Ver produto" className=""/>
+              <Button text="Ver produto" className="" />
             </div>
           </div>
         </section>
@@ -88,7 +89,17 @@ function App() {
           </ul>
         </section>
         <Products />
-        <Products seeAll={true}/>
+        <Products seeAll={true} />
+        <section aria-labelledby="brands" id="brands">
+          <h2 className="brands-title">Navegue por marcas</h2>
+          <ul className="brands-list">
+            <li className="brand"><img src={Logo} alt="Econverse Logo" /></li>
+            <li className="brand"><img src={Logo} alt="Econverse Logo" /></li>
+            <li className="brand"><img src={Logo} alt="Econverse Logo" /></li>
+            <li className="brand"><img src={Logo} alt="Econverse Logo" /></li>
+            <li className="brand"><img src={Logo} alt="Econverse Logo" /></li>
+          </ul>
+        </section>
       </main>
     </>
   );

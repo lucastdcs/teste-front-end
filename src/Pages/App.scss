@@ -1,7 +1,7 @@
 @import "../Styles/global";
 @import "../Styles/variables";
 
-main{
+main {
   overflow: hidden;
 }
 .hero {
@@ -73,8 +73,42 @@ main{
         span {
           text-align: center;
           color: #4e4e4e;
-         
         }
+      }
+    }
+  }
+}
+
+#brands {
+  max-width: 1250px;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  .brands-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: $blue;
+  }
+
+  .brands-list {
+    list-style: none;
+    @include flex(row, inherit, center);
+    gap: 42px;
+
+    .brand {
+      width: 211px;
+      height: 211px;
+      background-color: white;
+      box-shadow: 0px 7px 20px 0px #00000021;
+      border-radius: 50%;
+      position: relative;
+      cursor: pointer;
+
+      img {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
       }
     }
   }
