@@ -1,5 +1,6 @@
 import "./Products.scss";
 import ProductsCarousel from "../ProductsCarousel/ProductsCarousel";
+import PartnersCard from "../PartnersCard/PartnersCard";
 
 type Props ={};
 function Products({}: Props) {
@@ -7,7 +8,7 @@ function Products({}: Props) {
   return (
     <section className="related-products">
       <div className="container">
-        <h2>Produtos relacionados</h2>
+        <h2 className="products-title">Produtos relacionados</h2>
         <nav className="product-categories">
           <ul>
             <li className="active">
@@ -31,6 +32,7 @@ function Products({}: Props) {
           </ul>
         </nav>
         <ProductsCarousel/>
+        <PartnersCard/>
       </div>
     </section>
   );

@@ -1,0 +1,51 @@
+@import "../../Styles/global";
+@import "../../Styles/variables";
+
+.cards-container {
+  @include flex(row, center, center);
+  gap: 13px;
+  margin: 90px auto;
+  .partners-card {
+    @include flex(column, flex-end, flex-start);
+    position: relative;
+    width: 634px;
+    height: 350px;
+    border-radius: 20px;
+
+    background-image: url("../../assets/imgs/partners-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    text-align: left;
+
+    color: white;
+
+    overflow: hidden;
+    .content-wrapper {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      padding: 40px 44px;
+
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 85.04%);
+
+      .partners-title {
+        font-size: 40px;
+        font-weight: 700;
+        margin: 0;
+      }
+
+      .partners-text {
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+
+      .tertiary-button {
+        width: 144px;
+      }
+    }
+  }
+}
