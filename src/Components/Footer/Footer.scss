@@ -1,0 +1,137 @@
+@import "../../Styles/global";
+@import "../../Styles/variables";
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+.footer {
+  background-color: #f4f4f4;
+
+  .newsletter {
+    background-color: $purple;
+    color: #fff;
+    padding: 40px 0;
+
+    .newsletter-content {
+      @include flex(row, center, center);
+      gap: 124px;
+
+      text-align: left;
+
+      .newsletter-text-wrapper {
+        .newsletter-title {
+          font-family: Outfit;
+          font-size: 32px;
+          font-weight: 600;
+          margin: 0;
+        }
+
+        .newsletter-description {
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 18px;
+          margin: 0;
+          margin-top: 8px;
+        }
+      }
+
+      .newsletter-form {
+        @include flex(column, center, flex-start);
+        gap: 8px;
+
+        .input-group {
+          @include flex;
+          width: 639px;
+          gap: 8px;
+
+          input {
+            flex: 2;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+          }
+          button {
+            flex: 1.5;
+          }
+        }
+
+        .checkbox-group {
+          @include flex;
+        }
+      }
+    }
+  }
+
+  .footer-content {
+    @include flex(row, center, center);
+    gap: 90px;
+    margin: 61.5px 80px;
+
+    .footer-logo {
+      @include flex(column);
+      border-right: 2px solid #e0e0e0;
+      width: 444px;
+      padding-right: 90px;
+
+      img {
+        width: 164px;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 10px;
+
+        a img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    .footer-content-text {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 21px;
+      color: #3f3f40;
+    }
+    .footer-links {
+      @include flex;
+      gap: 100px;
+
+      h3 {
+        font-size: 16px;
+        font-weight: 700;
+        color: #222222b5;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          a {
+            font-family: Work Sans;
+            font-size: 14px;
+            font-weight: 400;
+            color: #222222b5;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom-text {
+    background-color: white;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 19.5px;
+    color: #3F3F40;
+    padding: 13px;
+    margin: 0;
+  }
+}

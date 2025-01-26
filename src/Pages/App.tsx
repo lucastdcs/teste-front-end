@@ -2,6 +2,7 @@ import "./App.scss";
 import Header from "../Components/Header/Header";
 import Button from "../Components/Button/Button";
 import Products from "../Components/Products/Products";
+import Footer from "../Components/Footer/Footer";
 import TechIcon from "../assets/icons/categories/tech-icon.svg";
 import SupermarketIcon from "../assets/icons/categories/supermarket-icon.svg";
 import BeveragetIcon from "../assets/icons/categories/beverage-icon.svg";
@@ -88,8 +89,8 @@ function App() {
             </li>
           </ul>
         </section>
-        <Products />
-        <Products seeAll={true} />
+        <Products partners/>
+        <Products seeAll partners/>
         <section aria-labelledby="brands" id="brands">
           <h2 className="brands-title">Navegue por marcas</h2>
           <ul className="brands-list">
@@ -100,7 +101,9 @@ function App() {
             <li className="brand"><img src={Logo} alt="Econverse Logo" /></li>
           </ul>
         </section>
+        <Products seeAll/>
       </main>
+      <Footer></Footer>
     </>
   );
 }

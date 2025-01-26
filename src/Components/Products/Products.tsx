@@ -4,8 +4,9 @@ import PartnersCard from "../PartnersCard/PartnersCard";
 
 type Props = {
   seeAll?: boolean;
+  partners?: boolean;
 };
-function Products({ seeAll }: Props) {
+function Products({ seeAll, partners }: Props) {
   const categories = ["Celular", "Acessórios", "Tablets", "Notebooks", "TVs"];
   return (
     <section className="related-products">
@@ -38,7 +39,9 @@ function Products({ seeAll }: Props) {
         )}
 
         <ProductsCarousel />
-        <PartnersCard />
+
+        {partners && <PartnersCard />}
+
       </div>
     </section>
   );
