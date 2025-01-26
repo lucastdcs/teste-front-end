@@ -1,28 +1,31 @@
 import "./ProductCard.scss";
 import Button from "../Button/Button";
 
-type Props = {};
+// Tipagem para as props do card
+type Props = {
+  productName: string;
+  descriptionShort: string;
+  photo: string;
+  price: number;
+  onBuy: () => void;
+};
 
-function ProductCard({}: Props) {
-
+function ProductCard({
+  productName,
+  descriptionShort,
+  photo,
+  price,
+  onBuy,
+}: Props) {
   return (
     <div className="product-card">
-   
-      <img
-        src="https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png"
-        alt=""
-      />
-        <div className="product-info">
-          <p className="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-          <p className="old-price">R$30,90 </p>
-          <p className="new-price">R$28,90 </p>
-          <p className="payment-description">ou 2x de R$49,95 sem juros</p>
-          <p className="free-shipping">Frete grátis</p>
-        </div>
-    
-      <Button text="Comprar" className="secondary-button" />
+      <img src={photo} alt={productName} className="product-photo" />
+      <div className="product-info">
+        <h3 className="product-name">{productName}</h3>
+        <p className="description">{descriptionShort}</p>
+        <p className="price">R$ {price.toFixed(2)}</p>
+      </div>
+      <Button text="Comprar" className="secondary-button" onClick={onBuy} />
     </div>
   );
 }

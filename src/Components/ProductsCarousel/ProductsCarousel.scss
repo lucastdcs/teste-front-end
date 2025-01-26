@@ -1,13 +1,100 @@
 @import "../../Styles/global";
 @import "../../Styles/variables";
+@import url("https://fonts.googleapis.com/css2?family=Outfit&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-.arrow-prev{
-    position: absolute;
-    top: 0;
-    right: 0;
+.arrow-prev {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
-.arrow-next{
+.arrow-next {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 769px;
+  height: 299.26px;
+  background-color: white;
+  border-radius: 6px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999; /* Garante que a sobreposição fique abaixo do modal */
+}
+
+.modal-content {
+  @include flex(row, center, center);
+  height: 100%;
+  gap: 90px;
+
+  .content-wrapper {
+    @include flex(column, center, flex-start);
+
+    .modal-content-title {
+      color: #3f3f40;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      margin-top: 0;
+
+
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: #3f3f40;
+      margin-top: 0;
+      margin-bottom: 32px;
+
+    }
+
+    .modal-description {
+      font-family: Work Sans;
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 15.05px;
+      letter-spacing: 0.05em;
+      color: #9f9f9f;
+      margin-top: 0;
+      margin-bottom: 9px;
+
+
+    }
+
+    .modal-link {
+      font-family: Work Sans;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-top: 0;
+      margin-bottom: 32px;
+
+    }
+  }
+}
+
+
+.close{
     position: absolute;
-    top: 0;
-    left: 0;
+    right: 20px;
+    top: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
 }
